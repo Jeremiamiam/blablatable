@@ -602,7 +602,7 @@ const Navigation = () => {
 // App Component avec Router
 function App() {
   return (
-    <Router basename="/blablatable">
+    <Router basename={import.meta.env.DEV ? "" : "/blablatable"}>
       <div className="min-h-screen bg-base-100">
         <Navigation />
         <Routes>
